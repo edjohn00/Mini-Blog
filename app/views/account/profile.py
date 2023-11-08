@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic
-from blogs.views.mixin import TemplateLocationMixin
+from app.views.mixin import TemplateLocationMixin
 
 
 class IndexView(LoginRequiredMixin, TemplateLocationMixin, generic.TemplateView):
