@@ -1,0 +1,74 @@
+{% extend "blogs/base.html" %}
+
+{% block blogs_content %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="#" class="brand-link">
+        <span class="brand-text font-weight-light">Bloggeries</span>
+    </a>
+
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <a href="{% url 'blogs:accounts:profile:index' %}" class="d-block">{{user}}</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-according="false">
+            <li class="nav-item">
+                <a href="#" hx-get="#" hx-target="#content" hx-push-url="true" hx-indicator="#indicator" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>Home</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" hx-get="#" hx-target="#content" hx-push-url="true" hx-indicator="#indicator" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>All blogs</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" hx-get="#" hx-target="#content" hx-push-url="true" hx-indicator="#indicator" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>All bloggers</p>
+                </a>
+            </li>
+            <div class="mt-5">
+                <li class="nav-item">
+                    <a href="#" hx-get="#" hx-target="#content" hx-push-url="true" hx-indicator="#indicator" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>logout</p>
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-according="false">
+
+        </ul>
+    </nav>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0" id="page_title">
+                            {% block page_title %}{% endblock page_title%}
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <ol id="breadcrumb" class="breadcrumb float-sm-right">
+                        {% block breadcrumb %} {% endblock breadcrumb %}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        {% block content %} {% endblock content %}
+    </div>
+</aside>
