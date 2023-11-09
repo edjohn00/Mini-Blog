@@ -6,17 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock title%}</title>
-    <!-- htmx -->
-    <script src="{% static 'js/htmx.min.js' %}" defer></script>
     <!-- bootstrap -->
     <script src="{% static 'bootstrap/js/bootstrap.buddle.min.js' %}" defer></script>
     <!-- css -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+    <!-- htmx -->
+    <script src="{% static 'js/htmx.min.js' %}" defer></script>
     <!-- adminlte -->
     <script src="{% static 'js/adminlte.min.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'css/adminlte.min.css' %}" />
     <!-- jquery -->
     <script src="{% static 'js/jquery.min.js' %}" defer></script>
+
 </head>
 <body>
     {% block body %} {% endblock body %}
