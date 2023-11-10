@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     # new applications
     "blogs",
     "django_htmx",
+    "crispy_forms",
+    "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "blogs.Author"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "boostrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
