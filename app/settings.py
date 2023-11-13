@@ -146,3 +146,5 @@ AUTH_USER_MODEL = "blogs.Author"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "boostrap4"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+DJANGO_SETTINGS_MODULE = "blogs.settings"
