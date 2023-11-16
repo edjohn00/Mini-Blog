@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "django_htmx",
     "crispy_forms",
     "crispy_bootstrap4",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "app.wsgi.application"
 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.DjangoModelPermissions",
+    ),
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -146,5 +152,3 @@ AUTH_USER_MODEL = "blogs.Author"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "boostrap4"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
-
-DJANGO_SETTINGS_MODULE = "blogs.settings"

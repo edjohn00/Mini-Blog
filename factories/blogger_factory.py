@@ -1,6 +1,6 @@
 import factory
 
-from blogs.models import Blogger
+from blogs.models import Author
 
 
 class BloggerFactory(factory.django.DjangoModelFactory):
@@ -12,4 +12,4 @@ class BloggerFactory(factory.django.DjangoModelFactory):
     is_superuser = False
 
     class Meta:
-        model = Blogger
+        model = Author
